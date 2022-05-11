@@ -4,9 +4,11 @@
 // Tharaka Madhusanka
 
 function generateEnvironmentContent() {
+  const environment = process.env.PARAM_ENVIRONMENT;
+  console.log(environment);
   return `export const environment = {
     production: ${process.env.IS_PRODUCTION || false},
-    environment: ${process.env.PARAM_ENVIRONMENT.toString() || "local"},
+    environment: ${environment|| "local"},
     sampleText: ${process.env.SAMPLE_PARAM_STORE.toString() || "I am from Dynamic Environment :D"}
   };`
 }
