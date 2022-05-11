@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'aws-sample';
+  title = 'aws-sample-test';
   sampleText = environment.sampleText;
   constructor() {
     console.log('Test');
