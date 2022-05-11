@@ -11,6 +11,8 @@ export class AppComponent {
   title = 'aws-sample';
   sampleText = environment.sampleText;
   constructor() {
+  console.log(this.sampleText, 'This will throw error');
+
     if (this.sampleText === "I am Sample Parameter Store")
     console.log(this.sampleText, 'This will throw error');
     console.log('Param is reading!');
