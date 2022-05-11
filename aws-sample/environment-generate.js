@@ -6,8 +6,8 @@
 function generateEnvironmentContent() {
   return `export const environment = {
     production: ${process.env.IS_PRODUCTION || false},
-    environment: ${process.env.PARAM_ENVIRONMENT || 'local'},
-    sampleText: ${process.env.SAMPLE_PARAM_STORE || 'I am from Dynamic Environment :D'}
+    environment: ${process.env.PARAM_ENVIRONMENT || "local"},
+    sampleText: ${process.env.SAMPLE_PARAM_STORE || "I am from Dynamic Environment :D"}
   };`
 }
 
