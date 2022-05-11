@@ -4,7 +4,6 @@
 // Tharaka Madhusanka
 
 function generateEnvironmentContent() {
-  console.log(environment);
   return `export const environment = {
     production: ${process.env.IS_PRODUCTION || false},
     environment: "${process.env.ENVIRONMENT|| "local"}",
