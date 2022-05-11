@@ -8,8 +8,8 @@ function generateEnvironmentContent() {
   console.log(environment);
   return `export const environment = {
     production: ${process.env.IS_PRODUCTION || false},
-    environment: ${environment|| "local"},
-    sampleText: ${process.env.SAMPLE_PARAM_STORE.toString() || "I am from Dynamic Environment :D"}
+    environment: "${environment|| "local"}",
+    sampleText: "${process.env.SAMPLE_PARAM_STORE.toString() || "I am from Dynamic Environment :D"}"
   };`
 }
 
