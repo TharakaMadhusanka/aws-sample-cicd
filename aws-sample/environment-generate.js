@@ -4,12 +4,11 @@
 // Tharaka Madhusanka
 
 function generateEnvironmentContent() {
-  const environment = process.env.PARAM_ENVIRONMENT;
   console.log(environment);
   return `export const environment = {
     production: ${process.env.IS_PRODUCTION || false},
-    environment: "${environment|| "local"}",
-    sampleText: "${process.env.SAMPLE_PARAM_STORE.toString() || "I am from Dynamic Environment :D"}"
+    environment: "${process.env.ENVIRONMENT|| "local"}",
+    sampleText: "${process.env.SAMPLE_PARAM_STORE || "I am from Dynamic Environment :D"}"
   };`
 }
 
@@ -18,6 +17,5 @@ function generateEnvironmentContent() {
   const fileName = 'environment.ts';
   const content = generateEnvironmentContent();
   process.chdir(`src/environments`);
-  console.log(process.env.SAMPLE_PARAM_STORE.toString());
   fs.writeFile(fileName, content, (err) => { (err) ? console.log(err) : console.log('env is generated!') });
 })();
