@@ -16,5 +16,6 @@ function generateEnvironmentContent() {
   const fileName = 'environment.ts';
   const content = generateEnvironmentContent();
   process.chdir(`src/environments`);
+  console.log(process.env);
   fs.writeFile(fileName, content, (err) => { (err) ? console.log(err) : console.log('env is generated!') });
 })();
